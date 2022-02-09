@@ -1,0 +1,21 @@
+package site.metacoding.ex13.constant;
+
+public class EnumEx01 {
+
+	public static void add(String direction) {
+		
+// "LEFT", "RIGHT"
+		if(direction.equals("LEFT")|| direction.equals("RIGHT")) {
+			System.out.println("잘들어왔군");
+		}else {
+			System.out.println("너 잘못입력했어");
+
+	
+	} 	}
+	
+	public static void main(String[] args) {
+		add("LEFT");
+
+	}
+
+}

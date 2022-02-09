@@ -1,0 +1,20 @@
+package site.metacoding.ex13;
+
+import javax.swing.JPanel;
+
+public class NullLayout extends MyFrame{
+
+	public NullLayout() {
+		super(300,300);
+		
+		JPanel panel = (JPanel) getContentPane();
+		
+	}
+
+	
+	
+	
+	
+	
+
+}

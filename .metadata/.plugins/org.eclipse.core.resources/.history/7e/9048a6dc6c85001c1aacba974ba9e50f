@@ -1,0 +1,12 @@
+package site.metacoding.ex13;
+
+import java.awt.GridLayout;
+
+public class GirdLayout extends MyFrame{
+	supe(500, 500)r;
+
+	public static void main(String[] args) {
+		new GridLayout();
+		System.out.println();
+	}
+}

@@ -1,0 +1,16 @@
+package site.metacoding.ex13;
+
+public class NullLayout extends Myframe{
+
+	public NullLayout() {
+		super(300,300);
+		
+	}
+
+	
+	
+	
+	
+	
+
+}

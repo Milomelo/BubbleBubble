@@ -1,0 +1,14 @@
+package site.metacoding.ex13;
+
+public class BorderLayoutEx01 {
+	super(500,500);
+	
+	JPanel panel = (JPanel)getContentPane();
+	
+	JButton btnNorth = new JButton("合率")
+			JButton btnEast = new JButton("悼率")
+			JButton btnWestern = new JButton("辑率")
+			JButton btnSouth = new JButton("巢率")
+			JButton btnCenter = new JButton("吝居")
+
+}

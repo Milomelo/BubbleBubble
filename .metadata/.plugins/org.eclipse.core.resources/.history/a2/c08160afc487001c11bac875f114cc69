@@ -1,0 +1,73 @@
+	package site.metacoding.ex13;
+	
+	import javax.swing.JFrame;
+	import javax.swing.JLabel;
+	import javax.swing.JPanel;
+	import javax.swing.JButton;
+	import java.awt.BorderLayout;
+	import java.awt.Graphics;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	
+	class MyPanel extends JPanel {
+		@Override
+		protected void paintComponent(Graphics g) { // g는 붓이다. 
+			super.paintComponent(g);
+			System.out.println("므ㄷㅈㄹㄷㅈㄹㅈㄷㄹㄷㅈㄹㄷ이");
+		g.drawL
+		}
+	}
+	
+	public class EventEx02 extends JFrame implements UserInterface {
+	
+		MyPanel myPanel;
+		JLabel lableText;
+		JButton btn1;
+	
+		public EventEx02() {
+			initSetting();
+			initObject();
+			initAssign();
+			initListener();
+	
+			setVisible(true);
+		}
+	
+		@Override
+		public void initSetting() {
+			setSize(300, 300);
+			setLocationRelativeTo(null); // 프레임 화면 중앙 배치
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 닫기버튼 클릭시 main 종료
+		}
+	
+		@Override
+		public void initObject() {
+			myPanel = new MyPanel();
+			lableText = new JLabel("첫글자");
+			btn1 = new JButton("글자번경");
+	
+		}
+	
+		@Override
+		public void initAssign() {
+			add(myPanel); // JFrame에 Panel 하나 add
+			myPanel.add(lableText);
+			myPanel.add(btn1);
+		}
+	
+		@Override
+		public void initListener() {
+			btn1.addActionListener(new ActionListener() {
+	
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					lableText.setText("두번째 글자"); // setText 메서드는 내부에 paintcompnent를 재호출해준다.
+				}
+			});
+		}
+	
+		public static void main(String[] args) {
+			new EventEx02();
+		}
+	
+	}

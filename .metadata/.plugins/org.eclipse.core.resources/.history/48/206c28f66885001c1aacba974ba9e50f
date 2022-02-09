@@ -1,0 +1,14 @@
+package site.metacoding.ex13.constant;
+
+public class EnumEx02 {
+	
+	public static void add() {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

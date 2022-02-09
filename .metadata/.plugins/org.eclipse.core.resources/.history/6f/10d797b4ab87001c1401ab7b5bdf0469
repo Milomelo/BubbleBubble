@@ -1,0 +1,16 @@
+package site.metacoding.ex13;
+
+import javax.swing.JFrame;
+
+public class EvenrEx01 extends JFrame {
+
+	public public EvenrEx01() {
+	
+	}{
+		
+	}
+	
+	public static void main(String[] args) {
+	
+
+}

@@ -1,0 +1,143 @@
+package site.metacoding.selfstudying02;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class Cha extends JLabel {
+	private ImageIcon chaR, chaL;
+
+	private int x;
+	private int y;
+	private boolean isRight;
+
+	public boolean isUp() {
+		return isUp;
+	}
+
+	public void setUp(boolean isUp) {
+		this.isUp = isUp;
+	}
+
+	public boolean isDown() {
+		return isDown;
+	}
+
+	public void setDown(boolean isDown) {
+		this.isDown = isDown;
+	}
+
+	private boolean isUp;
+	private boolean isDown;
+
+	public boolean isRight() {
+		return isRight;
+	}
+
+	public void setRight(boolean isRight) {
+		this.isRight = isRight;
+	}
+
+	public boolean isLeft() {
+		return isLeft;
+	}
+
+	public void setLeft(boolean isLeft) {
+		this.isLeft = isLeft;
+	}
+
+	private boolean isLeft;
+
+	public Cha() {
+		initObject();
+		initSetting();
+	}
+
+	private void initObject() {
+		chaR = new ImageIcon("image/playerR.png");
+		chaL = new ImageIcon("image/playerL.png");
+	}
+
+	private void initSetting() {
+		x = 70;
+		y = 535;
+		setIcon(chaR);
+		setSize(50, 50);
+		setLocation(x, y);
+		isRight = false;
+		isLeft = false;
+
+	}
+
+	public void right() {
+		isRight = true;
+		setIcon(chaR);
+		System.out.println("오른쪽으로 이동");
+
+		new Thread(() -> {
+			while (isRight) {
+				x = x + 10;
+				setLocation(x, y);
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
+
+	}
+
+	public void left() {
+		isLeft = true;
+		setIcon(chaL);
+		System.out.println("왼쪽으로 이동");
+		new Thread(() -> {
+			while (isLeft) {
+				x = x - 10;
+				setLocation(x, y);
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}).start();
+
+	}
+
+	public void up() {
+		isUp = true;
+		setIcon(chaL);
+		System.out.println("왼쪽으로 이동");
+		new Thread(() -> {
+			while (isUp) {
+				y = y - 20;
+				setLocation(x, y);
+
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (isUp == false) {
+				
+				while (isUp) {
+					y = y + 20;
+					setLocation(x, y);
+
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	
+			}
+		}).start();
+
+	}
+
+}

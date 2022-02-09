@@ -1,0 +1,56 @@
+package site.metacoding.ex13;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+
+class MyPanel extends JPanel {
+}
+
+public class EventEx02 extends JFrame implements UserInterface {
+
+	MyPanel myPanel;
+
+	public EventEx02() {
+		initSetting();
+		initObject();
+		initAssign();
+		initListener();
+
+		setVisible(true);
+	}
+
+	@Override
+	public void initSetting() {
+		setSize(300, 300);
+		setLocationRelativeTo(null); // 프레임 화면 중앙 배치
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 닫기버튼 클릭시 main 종료
+	}
+
+	@Override
+	public void initObject() {
+		myPanel = new MyPanel();
+		myPanel.setLayout(null);
+
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(79, 65, 153, 53);
+		myPanel.add(btnNewButton);
+	}
+
+	@Override
+	public void initAssign() {
+		getContentPane().add(myPanel); // JFrame에 Panel 하나 add
+	}
+
+	@Override
+	public void initListener() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

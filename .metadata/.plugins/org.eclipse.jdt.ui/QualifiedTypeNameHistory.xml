@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.constant.Way"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.NullLayout"/>
+    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
+    <fullyQualifiedTypeName name="javax.management.remote.SubjectDelegationPermission"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.EvenrEx01"/>
+    <fullyQualifiedTypeName name="java.awt.Checkbox"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.replacements.nodes.BitScanReverseNode"/>
+    <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
+    <fullyQualifiedTypeName name="java.awt.Label"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.MyFrame"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.UserInterface"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.Mypanel"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.EventEx02"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="site.metacoding.ex13.MyPanel"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="site.metacoding.bubble.ex01.BubbleFrame"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="site.metacoding.bubble.ex02.Player"/>
+    <fullyQualifiedTypeName name="site.metacoding.selfstudying.BubbleFrame"/>
+    <fullyQualifiedTypeName name="site.metacoding.selfstudying.Player"/>
+    <fullyQualifiedTypeName name="site.metacoding.selfstudying.Cha"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.core.common.type.ArithmeticOpTable.BinaryOp.And"/>
+    <fullyQualifiedTypeName name="javax.xml.stream.events.StartDocument"/>
+    <fullyQualifiedTypeName name="javax.management.loading.PrivateClassLoader"/>
+    <fullyQualifiedTypeName name="java.lang.Void"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="site.metacoding.bubble.selfstudying.BubbleFrame"/>
+    <fullyQualifiedTypeName name="site.metacoding.bubble.selfstudying.Player"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.nodes.java.NewArrayNode"/>
+    <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
+    <fullyQualifiedTypeName name="site.metacoding.bubble.selfstudying01.Player"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+</qualifiedTypeNameHistroy>
