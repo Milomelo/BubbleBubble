@@ -1,0 +1,14 @@
+package site.metacoding.bubble.ex06;
+
+import java.util.List;
+
+public class BackGroundMapService {
+
+	//컴포지션
+	private Player players;
+	
+	
+	public BackGroundMapService(Player player) {
+		this.player = player;
+	}
+}

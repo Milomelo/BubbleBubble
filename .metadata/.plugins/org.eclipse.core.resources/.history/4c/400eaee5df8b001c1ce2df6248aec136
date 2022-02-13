@@ -1,0 +1,125 @@
+package site.metacoding.bubble.ex09;
+
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import site.metacoding.pratice.BackgroundMap;
+
+public class Bubble extends JLabel {
+
+	private BubbleFrame context;
+	private Player player;
+	private BackgroundMap backgroundMap;
+
+	private int x;
+	private int y;
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public Bubble(BackgroundMap backgroundMap) {
+		this.backgroundMap = backgroundMap;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	private boolean isleft;
+
+	public boolean isIsleft() {
+		return isleft;
+	}
+
+	public void setIsleft(boolean isleft) {
+		this.isleft = isleft;
+	}
+
+	public boolean isIsright() {
+		return isright;
+	}
+
+	public void setIsright(boolean isright) {
+		this.isright = isright;
+	}
+
+	private boolean isright;
+	private ImageIcon bubble, bomb;
+
+	public Bubble(BubbleFrame context) {
+		this.context = context;
+		this.player = context.getPlayer();
+		// this.player = context.getPla
+		initObject();
+		initSetting();
+		BubbleMove();
+	}
+
+	private void initObject() {
+		bubble = new ImageIcon("image/bubble.png");
+		bomb = new ImageIcon("image/bomb.png");
+	}
+
+	private void initSetting() {
+		x = player.getX();
+		y = player.getY();
+		setIcon(bubble);
+		setSize(50, 50);
+		setLocation(x, y);
+		isright = true;
+		isleft = true;
+	}
+
+	private void 오른쪽벽충돌감지() {
+		System.out.println("오른쪽충돌계산중");
+		Color rightColor = new Color(backgroundMap.getImage().getRGB(getX() + 50 + 15, getY() + 25));
+
+	}
+
+	private void BubbleMove() {
+		isright = true;
+
+		new Thread(() -> {
+			if (player.getDirection() == 1) {
+				while (isright) {
+//					System.out.println("이것은 작동");
+					x = x + 10;
+					setLocation(x, y);
+					isright = false;
+
+					if (isright == false) {
+						break;
+					}
+
+					try {
+						Thread.sleep(10);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+
+				}
+
+			}
+		}).start();
+
+		new Thread(() -> {
+			if (player.getDirection() == 0) {
+				for (int i = 0; i < 400; i++) {
+//					System.out.println("이것은 작동");
+					x = x - 10;
+					setLocation(x, y);
+					try {
+						Thread.sleep(1);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+
+			}
+		}).start();
+
+	}
+}

@@ -1,0 +1,10 @@
+package site.metacoding.pratice;
+
+public interface init {
+	void initObject();
+
+	void initSetting();
+
+	default void initLinster() {};
+
+}

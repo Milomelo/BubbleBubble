@@ -1,0 +1,7 @@
+package site.metacoding.bubble.ex06;
+
+public class BackGroundMapService {
+
+	public BackGroundMapService()
+{}
+	}

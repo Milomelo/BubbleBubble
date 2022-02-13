@@ -1,0 +1,8 @@
+package site.metacoding.pratice;
+
+public class init {
+void initObject();
+void initSetting();
+void initLinster();
+	
+}

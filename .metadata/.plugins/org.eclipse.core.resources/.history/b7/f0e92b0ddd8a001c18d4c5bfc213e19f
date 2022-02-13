@@ -1,0 +1,39 @@
+package site.metacoding.bubble.ex08;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class Bubble extends JLabel {
+
+   private BubbleFrame context;
+   private Player player;
+
+   private int x;
+   private int y;
+
+   private ImageIcon bubble, bomb;
+
+   // bubble은 player의 위치에 의존해야함
+   // player에만 의존하면 나중에 적군을 만들때 문제가 발생
+   // 따라서 context에 의존!
+   public Bubble(BubbleFrame context) {
+
+      this.context = context;
+      this.player = context.getPlayer();
+      initObject();
+      initSetting();
+   }
+
+   private void initObject() {
+      bubble = new ImageIcon("image/bubble.png");
+      bomb = new ImageIcon("image/bomb.png");
+   }
+
+   private void initSetting() {
+      x = player.getX();
+      y = player.getY();
+      setIcon(풍선껌);
+      setSize(50, 50);
+      setLocation(x, y);
+   }
+}

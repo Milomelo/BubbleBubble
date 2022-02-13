@@ -1,0 +1,25 @@
+package site.metacoding.pratice;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BackgroundMap extends JLabel {
+	private BufferedImage image;
+	private ImageIcon backgroundMap;
+
+	public BackgroundMap() {
+		backgroundMap = new ImageIcon("image/backgroundMap.png");
+		setIcon(backgroundMap); // Div 박스에 이미지 넣기
+		try {
+			// raw 하게 읽는 다는 뜻 : 낡것 그대로 읽는 것
+			image = ImageIO.read(new File("image/backgroundMapService.png"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

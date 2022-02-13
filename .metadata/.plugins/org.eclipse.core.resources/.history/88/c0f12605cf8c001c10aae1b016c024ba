@@ -1,0 +1,22 @@
+package site.metacoding.bubble.ex09;
+
+import java.awt.image.BufferedImage;
+
+public class BBackgroundMapservice implements Runnable {
+	private Bubble bubble;
+	private BufferedImage image;
+	
+	public BBackgroundMapservice(Bubble bubble) {
+		this.bubble = bubble;
+		
+		try {
+			image = ImageIo.read(new file("image/backgroundMapService.png"));
+		} catch (Exception e) {
+			}
+	}
+
+	@Override
+	public void run() {
+	}
+
+}

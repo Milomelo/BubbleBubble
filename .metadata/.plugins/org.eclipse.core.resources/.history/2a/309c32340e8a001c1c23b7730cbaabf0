@@ -1,0 +1,27 @@
+package site.metacoding.bubble.ex06;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+
+// 서비스 독릭적인 스레드로 돌려야 한다( 이유: 벽에 부딪히는지 계속 확인해야하기 때문)
+public class BackGroundMapService {
+
+	// 컴포지션
+	private Player player;
+	private BufferedImage image;
+
+	// 컴포지션을 위한 기술 => 의존성 주입(생성자를 통해서) dependency injection
+	public BackGroundMapService(Player player) {
+		this.player = player;
+		try {
+	         image = ImageIO.read(new File("image/backgroundMapService.png"));
+	         System.out.println(image);
+
+		} catch (Exception e) {
+
+		}
+	}
+}

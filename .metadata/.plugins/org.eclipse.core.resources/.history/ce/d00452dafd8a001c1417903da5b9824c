@@ -1,0 +1,21 @@
+package site.metacoding.pratice;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BackgroundMap extends JLabel {
+	private ImageIcon backgroundMap;
+	private int x, y;
+
+	public BackgroundMap() {
+		backgroundMap = new ImageIcon("image/backgroundMapIcon.png");
+
+		x = 70;
+		y = 535;
+		setIcon(playerR);
+		setSize(50, 50);
+		setLocation(x, y);
+
+	}
+
+}

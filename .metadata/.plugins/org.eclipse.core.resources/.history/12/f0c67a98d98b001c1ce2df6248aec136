@@ -1,0 +1,13 @@
+package site.metacoding.bubble.ex09;
+
+public class Snippet {
+		public boolean isLeft() {
+			return left;
+		}
+	
+		public void setLeft(boolean left) {
+			this.left = left;
+		}
+	}
+}
+

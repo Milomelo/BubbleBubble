@@ -1,0 +1,9 @@
+package site.metacoding.pratice;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class BackgroundMap extends JLabel{
+private ImageIcon backgroundMapIcon;
+	
+}

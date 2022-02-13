@@ -1,0 +1,26 @@
+package site.metacoding.bubble.ex09;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+public class BBackgroundMapservice implements Runnable {
+	private Bubble bubble;
+	private BufferedImage image;
+	
+	public BBackgroundMapservice(Bubble bubble) {
+		this.bubble = bubble;
+		
+		try {
+			image = ImageIo.read(new File("image/backgroundMapService.png"));
+		} catch (Exception e) {
+			}
+	}
+
+	@Override
+	public void run() {
+	}
+
+}

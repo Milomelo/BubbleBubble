@@ -1,0 +1,24 @@
+package site.metacoding.pratice;
+
+/*
+ * @author 유승현
+ * 생성자 실행 순서~~~~~~~~~~~~~~
+ * initObject 1번 실행
+ * initSetting 2번 실행
+ * initListener 3번 실행
+ */
+
+public interface init {
+	void initObject();
+
+	void initSetting(
+			setSize(1000, 640);
+		      getContentPane().setLayout(null); // JFrame의 기본 JPanel의 레이아웃 설정
+		      setLocationRelativeTo(null); // 가운데 배치
+		      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x버튼 클릭시 JVM 같이 종료하기
+	);
+
+	default void initLinster() {
+	};
+
+}

@@ -1,0 +1,14 @@
+package site.metacoding.bubble.selfstudying02;
+
+import java.awt.image.BufferedImage;
+
+public class BackgroundMapService {
+
+	private Player player;
+	private BufferedImage image; // 이미지를 이미지 그대로 읽는다.
+
+	public BackgroundMapService(Player player) {
+	this.player	
+	}
+
+}

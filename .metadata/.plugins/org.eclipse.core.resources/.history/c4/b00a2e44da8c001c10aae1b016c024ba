@@ -1,0 +1,38 @@
+package site.metacoding.bubble.ex09;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+public class BBackgroundMapservice implements Runnable {
+	private Bubble bubble;
+	private BufferedImage image;
+
+	public BBackgroundMapservice(Bubble bubble) {
+		this.bubble = bubble;
+
+		try {
+			image = ImageIO.read(new File("image/backgroundMapService.png"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			Color leftColor = new Color(image.getRGB(bubble.getX()-10, bubble.getY()+25));
+			Color rightColor = new Color(image.getRGB(bubble.getX()+50 +10 , bubble.getY()+25));
+		
+			if (leftColor.getRed() == 255 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {
+				//System.out.println("왼쪽 벽에 충돌함");
+			}else if (rightColor.getRed() == 255 && rightColor.getGreen() == 0 && rightColor.getBlue() == 0) {
+				System.out.println("오른쪽 벽에 충돌함");
+			}
+		}
+
+	}
+
+}

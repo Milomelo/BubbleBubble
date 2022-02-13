@@ -1,0 +1,53 @@
+package site.metacoding.bubble.ex06;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+// 백그라운드 서비스 (독립적인 스레드로 돌려야한다.)
+public class BackgroundMapService implements Runnable {
+
+   // 컴포지션
+   private Player player;
+   private BufferedImage image; // BufferedImage는 이미지를 이미지 그대로 읽는다.(이미지 분석)
+
+   // DI(Dependency Injection) : 의존성 주입(생성자를 통해서 주입한다.)
+   // 컴포지션을 위한 기술
+   public BackgroundMapService(Player player) {
+      this.player = player;
+
+      try {
+         // raw하게 읽는다는 뜻 : 날것 그대로 읽는 것.
+         image = ImageIO.read(new File("image/test.png")); // 이미지를 색상으로 속성조회(Buffer로 읽는다)
+//         System.out.println(image); // 이미지 출력
+//         System.out.println(image.getRGB(10, 10)); // 색상출력 -65536 : 무슨색깔인지 알아보기 힘들다.
+
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+   }
+
+   @Override
+   public void run() { // 백그라운드서비스(메인에서 돌지않고 뒤에서 별도의 스레드가 돌려주는 서비스)
+
+      try {
+         // 색상 계산 (while)
+         while (true) {
+            // 플레이어 좌표(좌상단:시작점)에 맞는 색깔을 출력한다.
+            // 그래서 해당좌표의 사이즈를 + 해서 지정해준다.
+            Color color = new Color(image.getRGB(player.getX() + 50, player.getY()));
+            System.out.println(color.getRed()); // 255 : 빨간색 수치 0~255
+            System.out.println(color.getGreen()); // 0 : 빨간색 수치 0~255
+            System.out.println(color.getBlue()); // 0 : 빨간색 수치 0~255
+            System.out.println("==================="); // 색상확인 구분
+            Thread.sleep(10); // 충돌감지를 0.01초마다 한다.
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+
+   }
+
+}

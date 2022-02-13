@@ -1,0 +1,14 @@
+package site.metacoding.bubble.ex09;
+
+import javax.management.loading.PrivateClassLoader;
+
+public class BBackgroundMapservice implements Runnable {
+
+	@Override
+	public void run() {
+Private Bubble; 
+	}
+	
+	
+
+}

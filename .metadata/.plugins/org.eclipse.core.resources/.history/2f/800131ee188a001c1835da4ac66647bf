@@ -1,0 +1,19 @@
+package site.metacoding.bubble.selfstudying02;
+
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
+
+public class BackgroundMapService {
+
+	private Player player;
+	private BufferedImage image; // 이미지를 이미지 그대로 읽는다.
+
+	public BackgroundMapService(Player player) {
+	this.player = player;
+	image = ImageIO.read(new File("image/backgroundMapService.png"));
+	System.out.println(image);
+	System.out.println(image.getRGB(10,10));
+	}
+
+}

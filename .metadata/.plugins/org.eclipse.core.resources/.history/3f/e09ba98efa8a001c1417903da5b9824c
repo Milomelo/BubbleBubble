@@ -1,0 +1,18 @@
+package site.metacoding.pratice;
+
+interface knife{
+	void attack();
+	void cook();
+	
+}
+abstract class ¿ä¸®»ç{}
+
+class  implements knife{
+	public void 
+}
+
+
+public class PatternTest {
+
+	
+}

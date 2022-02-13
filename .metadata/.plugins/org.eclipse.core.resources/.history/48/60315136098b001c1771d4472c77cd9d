@@ -1,0 +1,113 @@
+package site.metacoding.pratice;
+
+import java.awt.im.spi.InputMethodContext;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class Player extends JLabel implements Moveable {
+
+	private static final String TAG = "Player : ";
+
+	private ImageIcon playerR, playerL;
+	private int x, y;
+
+	private boolean isLeft, isRight, isUp, isDown;
+
+	public boolean isLeft() {
+		return isLeft;
+	}
+
+	public void setLeft(boolean isLeft) {
+		this.isLeft = isLeft;
+	}
+
+	public boolean isRight() {
+		return isRight;
+	}
+
+	public void setRight(boolean isRight) {
+		this.isRight = isRight;
+	}
+
+	public boolean isUp() {
+		return isUp;
+	}
+
+	public void setUp(boolean isUp) {
+		this.isUp = isUp;
+	}
+
+	public boolean isDown() {
+		return isDown;
+	}
+
+	public void setDown(boolean isDown) {
+		this.isDown = isDown;
+	}
+
+	public Player() {
+		playerR = new ImageIcon("image/playerR.png");
+		playerL = new ImageIcon("image/playerL.png");
+
+		x = 70;
+		y = 535;
+
+		setIcon(playerR);
+		setSize(50, 50);
+		setLocation(x, y); // JLabelÀÇ À§Ä¡
+
+		isLeft = false;
+		isRight = false;
+		isUp = false;
+		isDown = false;
+		;
+
+	}
+
+	@Override
+	public void left() {
+		isLeft = true;
+
+		new Thread(() -> {
+			while (isLeft) {
+				try {
+					System.out.println(TAG + "left()");
+					x = x + 4;
+					setLocation(x, y);
+					Thread.sleep(10);
+				} catch (Exception e) {
+				}
+			}
+		}).start();
+		
+
+	}
+
+	@Override
+	public void right() {		
+		isRight = true;
+
+		new Thread(() -> {
+			while (isRight) {
+				try {
+					System.out.println(TAG + "right()");
+					x = x + 4;
+					setLocation(x, y);
+					Thread.sleep(10);
+				} catch (Exception e) {
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	public void up() {
+		System.out.println(TAG + "up()");
+	}
+
+	@Override
+	public void down() {
+		System.out.println(TAG + "down()");
+	}
+}

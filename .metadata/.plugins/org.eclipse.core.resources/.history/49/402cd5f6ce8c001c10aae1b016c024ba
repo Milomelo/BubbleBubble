@@ -1,0 +1,20 @@
+package site.metacoding.bubble.ex09;
+
+import java.awt.image.BufferedImage;
+
+import javax.management.loading.PrivateClassLoader;
+
+public class BBackgroundMapservice implements Runnable {
+	private Bubble bubble;
+	private BufferedImage image;
+	
+	public BBackgroundMapservice(Bubble bubble) {
+		this.bubble = bubble;
+		
+	}
+
+	@Override
+	public void run() {
+	}
+
+}
