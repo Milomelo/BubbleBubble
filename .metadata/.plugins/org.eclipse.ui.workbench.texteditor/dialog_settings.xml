@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="di"/>
+		<item key="selection" value="enemy"/>
 		<list key="findhistory">
+			<item value="enemy"/>
+			<item value="new"/>
 			<item value="dir"/>
 			<item value="di"/>
 			<item value="player"/>

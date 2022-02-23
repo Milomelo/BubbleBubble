@@ -1,8 +1,0 @@
-package site.metacoding.selfstudying;
-
-import javax.swing.JLabel;
-
-public class Player extends JLabel{
-	private Imagi
-	
-}

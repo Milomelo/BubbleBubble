@@ -1,7 +1,0 @@
-package site.metacoding.selfstudying;
-
-import javax.swing.JLabel;
-
-public class playor extends JLabel{
-	
-}
